@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>docs2to3 Extension</string>
+	<string>docs2to3</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -42,15 +42,15 @@
 			<key>Identifier</key>
 			<string>Button</string>
 			<key>Image</key>
-			<string>ToolbarItemIcon.pdf</string>
+			<string>logo.pdf</string>
 			<key>Label</key>
-			<string>Your Button</string>
+			<string>docs2to3</string>
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
 			<key>Allowed Domains</key>
 			<array>
-				<string>*.webkit.org</string>
+				<string>docs.python.org</string>
 			</array>
 			<key>Level</key>
 			<string>Some</string>
@@ -59,6 +59,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Daniel Grießhaber. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This is a Safari Extension. You should tell us what your extension does here.</string>
+	<string>Automatically redirect to the documentation of a particular python version when navigating to a url on &quot;docs.python.org&quot; from an outside referrer.</string>
 </dict>
 </plist>

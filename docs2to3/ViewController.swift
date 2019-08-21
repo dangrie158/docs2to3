@@ -12,10 +12,21 @@ import SafariServices.SFSafariApplication
 class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
+    @IBOutlet weak var targetVersionSelector: NSPopUpButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.appNameLabel.stringValue = "docs2to3";
+        let defaults = UserDefaults(suiteName: Constants.defaultsSuite)
+        
+        for version in Constants.versionNames.sorted(by: { $0.value < $1.value }) {
+            
+            targetVersionSelector.addItem(withTitle: version.value)
+            targetVersionSelector.item(withTitle: version.value)?.tag = version.key
+        }
+        
+        targetVersionSelector.selectItem(withTag: defaults?.integer(forKey: Constants.keyTargetVersion) ?? 0)
+        
     }
     
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {
@@ -27,4 +38,8 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func onTargetVersionChanged(_ sender: Any) {
+        let defaults = UserDefaults(suiteName: Constants.defaultsSuite)
+        defaults?.set(targetVersionSelector.selectedTag(), forKey: Constants.keyTargetVersion)
+    }
 }

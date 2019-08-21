@@ -18,7 +18,9 @@
 		652F03DF230D6809008AC064 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F03DE230D6809008AC064 /* SafariExtensionViewController.swift */; };
 		652F03E2230D6809008AC064 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652F03E0230D6809008AC064 /* SafariExtensionViewController.xib */; };
 		652F03E5230D6809008AC064 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 652F03E4230D6809008AC064 /* script.js */; };
-		652F03E7230D6809008AC064 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 652F03E6230D6809008AC064 /* ToolbarItemIcon.pdf */; };
+		652F03F3230D683C008AC064 /* logo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 652F03F2230D683C008AC064 /* logo.pdf */; };
+		652F03F5230D6C1A008AC064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F03F4230D6C1A008AC064 /* Constants.swift */; };
+		658FEE77230D752F00258212 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F03F4230D6C1A008AC064 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +62,10 @@
 		652F03E1230D6809008AC064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		652F03E3230D6809008AC064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652F03E4230D6809008AC064 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		652F03E6230D6809008AC064 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		652F03E8230D6809008AC064 /* docs2to3_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = docs2to3_Extension.entitlements; sourceTree = "<group>"; };
+		652F03F2230D683C008AC064 /* logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = logo.pdf; sourceTree = "<group>"; };
+		652F03F4230D6C1A008AC064 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		658FEE78230D7AFB00258212 /* docs2to3 Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "docs2to3 Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		652F03B8230D6809008AC064 = {
 			isa = PBXGroup;
 			children = (
+				652F03F4230D6C1A008AC064 /* Constants.swift */,
 				652F03C3230D6809008AC064 /* docs2to3 */,
 				652F03DB230D6809008AC064 /* docs2to3 Extension */,
 				652F03D8230D6809008AC064 /* Frameworks */,
@@ -126,12 +131,13 @@
 		652F03DB230D6809008AC064 /* docs2to3 Extension */ = {
 			isa = PBXGroup;
 			children = (
+				658FEE78230D7AFB00258212 /* docs2to3 Extension.entitlements */,
+				652F03F2230D683C008AC064 /* logo.pdf */,
 				652F03DC230D6809008AC064 /* SafariExtensionHandler.swift */,
 				652F03DE230D6809008AC064 /* SafariExtensionViewController.swift */,
 				652F03E0230D6809008AC064 /* SafariExtensionViewController.xib */,
 				652F03E3230D6809008AC064 /* Info.plist */,
 				652F03E4230D6809008AC064 /* script.js */,
-				652F03E6230D6809008AC064 /* ToolbarItemIcon.pdf */,
 				652F03E8230D6809008AC064 /* docs2to3_Extension.entitlements */,
 			);
 			path = "docs2to3 Extension";
@@ -188,9 +194,25 @@
 				TargetAttributes = {
 					652F03C0230D6809008AC064 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					652F03D3230D6809008AC064 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -219,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652F03C5230D6809008AC064 /* docs2to3.entitlements in Resources */,
+				652F03F3230D683C008AC064 /* logo.pdf in Resources */,
 				652F03CE230D6809008AC064 /* Assets.xcassets in Resources */,
 				652F03CA230D6809008AC064 /* Main.storyboard in Resources */,
 			);
@@ -228,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652F03E7230D6809008AC064 /* ToolbarItemIcon.pdf in Resources */,
 				652F03E2230D6809008AC064 /* SafariExtensionViewController.xib in Resources */,
 				652F03E5230D6809008AC064 /* script.js in Resources */,
 			);
@@ -243,6 +265,7 @@
 			files = (
 				652F03CC230D6809008AC064 /* ViewController.swift in Sources */,
 				652F03C7230D6809008AC064 /* AppDelegate.swift in Sources */,
+				652F03F5230D6C1A008AC064 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658FEE77230D752F00258212 /* Constants.swift in Sources */,
 				652F03DF230D6809008AC064 /* SafariExtensionViewController.swift in Sources */,
 				652F03DD230D6809008AC064 /* SafariExtensionHandler.swift in Sources */,
 			);
@@ -403,7 +427,7 @@
 		652F03EC230D6809008AC064 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "docs2to3 Extension/docs2to3_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "docs2to3 Extension/docs2to3 Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FKCC8V8H4X;
 				INFOPLIST_FILE = "docs2to3 Extension/Info.plist";
@@ -422,7 +446,7 @@
 		652F03ED230D6809008AC064 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "docs2to3 Extension/docs2to3_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "docs2to3 Extension/docs2to3 Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FKCC8V8H4X;
 				INFOPLIST_FILE = "docs2to3 Extension/Info.plist";
