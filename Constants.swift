@@ -18,6 +18,8 @@ class Constants {
         37: "Python 3.7",
         38: "Python 3.8 (pre)",
         39: "Python 3.9 (dev)",
+        3: "Python latest 3.X",
+        2: "Python latest 2.X",
     ]
     
     public static let versionUrls = [
@@ -27,5 +29,7 @@ class Constants {
         37: "3.7",
         38: "3.8",
         39: "3.9",
+        3: "3",
+        2: "2",
     ]
 }
